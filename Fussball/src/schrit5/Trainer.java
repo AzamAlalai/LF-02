@@ -1,6 +1,5 @@
-package schrit1;
+package schrit5;
 
-import schrit3.Person;
 
 public class Trainer extends Person {
 

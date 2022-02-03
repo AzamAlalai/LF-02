@@ -1,4 +1,4 @@
-package schrit3;
+package schrit4;
 
 public abstract class Person {
 

@@ -1,4 +1,4 @@
-package schrit2;
+package schrit3;
 
 import schrit1.Spieler;
 

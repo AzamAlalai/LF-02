@@ -1,6 +1,5 @@
-package schrit2;
+package schrit5;
 
-import schrit1.Spieler;
 
 public class Torwart extends Spieler {
     private int reaktion;

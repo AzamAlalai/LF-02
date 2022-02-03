@@ -1,4 +1,4 @@
-package schrit1;
+package schrit2;
 
 import schrit3.Person;
 

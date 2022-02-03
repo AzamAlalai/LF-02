@@ -1,6 +1,4 @@
-package schrit1;
-
-import schrit3.Person;
+package schrit5;
 
 public class Spieler extends Person {
 
@@ -59,5 +57,3 @@ public class Spieler extends Person {
     }
 
 }
-
-
