@@ -6,6 +6,10 @@ public class Spieler extends Person {
     private int torschuss;
     private int motivation;
     private int erzielteTore;
+    private int Tor;
+
+
+
 
     public Spieler(String name, int alter, int staerke, int torschuss, int motivation, int erzielteTore){
         super(name,alter);
@@ -54,6 +58,13 @@ public class Spieler extends Person {
 
     public void setErzielteTore(int erzielteTore){
         this.erzielteTore = erzielteTore;
+    }
+
+
+
+    public int addTor() {
+        Tor ++;
+        return Tor;
     }
 
 }

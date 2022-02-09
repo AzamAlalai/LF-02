@@ -5,12 +5,12 @@ public class Ergebnis {
     private int toreGast;
 
 
-    public int getToreHeim() {
+    public int addToreHeim() {
         toreHeim ++;
         return toreHeim;
     }
 
-    public int getToreGast() {
+    public int addToreGast() {
         toreGast ++;
         return toreGast;
     }

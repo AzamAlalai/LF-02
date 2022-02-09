@@ -9,7 +9,7 @@ public class Mannschaft {
     private ArrayList<Spieler> spielerliste;
     private int motivation;
     private int gesamtMotivation;
-    private int staerke;
+    private int Staerke;
     private int gesamtStaerke;
 
 
@@ -28,7 +28,7 @@ public class Mannschaft {
         this.name = name;
     }
 
-    public int getGesamtMotivation() {
+    public int getMotivation() {
         for (Spieler s:spielerliste) {
             motivation += s.getMotivation();
         }
@@ -37,12 +37,12 @@ public class Mannschaft {
         return gesamtMotivation;
     }
 
-    public int getGesamtStaerke() {
+    public int getStaerke() {
         for (Spieler s:spielerliste) {
-            staerke += s.getStaerke();
+            Staerke += s.getStaerke();
         }
-        staerke += torwart.getStaerke();
-        gesamtStaerke = staerke / (spielerliste.size()+1);
+        Staerke += torwart.getStaerke();
+        gesamtStaerke = Staerke / (spielerliste.size()+1);
         return gesamtStaerke;
     }
 
@@ -62,7 +62,7 @@ public class Mannschaft {
         this.torwart = torwart;
     }
 
-    public ArrayList getSpielerliste() {
+    public ArrayList getSpielerListe() {
         return spielerliste;
     }
 
@@ -76,8 +76,8 @@ public class Mannschaft {
                 "[Name]" + "\n" + name + "\n" +
                 "[Trainer]" + trainer + '\n' +
                 "[Torwart]" + torwart + '\n' +
-                "[Spieler]" + "\n" +getSpielerliste() +
-                "\n\n[Gesamt Motivation]" + "\n" + getGesamtMotivation() +
-                "\n[Gesamt Stärke]" + "\n" + getGesamtStaerke();
+                "[Spieler]" + "\n" +getSpielerListe() +
+                "\n\n[Gesamt Motivation]" + "\n" + getMotivation() +
+                "\n[Gesamt Stärke]" + "\n" + getStaerke();
     }
 }
