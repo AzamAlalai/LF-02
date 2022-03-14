@@ -3,8 +3,10 @@ package schritt1;
 public class Kunde extends Person {
     private Mitarbeiter betreuer;
 
-    public Kunde(String vorname, String nachname) {
+    public Kunde(String vorname, String nachname, Mitarbeiter betreuer, Adresse adresseKunde) {
         super(vorname, nachname);
+
+        this.betreuer=betreuer;
     }
 
     public Mitarbeiter getBetreuer() {
@@ -17,8 +19,12 @@ public class Kunde extends Person {
 
     @Override
     public String toString() {
-        return "Kunde{" +
+        return "Kunde{"
+                +
+                "vorname='" + getVorname() + '\'' +
+                ", nachname='" + getNachname() + '\''+
                 "betreuer=" + betreuer +
+
                 '}';
     }
 }

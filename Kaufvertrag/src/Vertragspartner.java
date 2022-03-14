@@ -1,14 +1,13 @@
-package schritt1;
+public class Vertragspartner{
 
-public class Person {
     private String vorname;
     private String nachname;
+    private String ausweisNr;
     private Adresse adresse;
 
-    public Person(String vorname, String nachname){
-        this.vorname=vorname;
-        this.nachname=nachname;
-        this.adresse=adresse;
+    public Vertragspartner(String vorname, String nachname) {
+        this.vorname = vorname;
+        this.nachname = nachname;
     }
 
     public String getVorname() {
@@ -27,6 +26,14 @@ public class Person {
         this.nachname = nachname;
     }
 
+    public String getAusweisNr() {
+        return ausweisNr;
+    }
+
+    public void setAusweisNr(String ausweisNr) {
+        this.ausweisNr = ausweisNr;
+    }
+
     public Adresse getAdresse() {
         return adresse;
     }
@@ -37,9 +44,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return
-                "vorname='" + vorname + '\'' +
-                ", nachname='" + nachname + '\''
-                ;
+        return "Vorname [" + getVorname() + "]\nNachname [" + getNachname() + "]\nAusweisNr [" + getAusweisNr() + "]\nAdresse : " + getAdresse();
     }
 }

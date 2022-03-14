@@ -1,7 +1,8 @@
 package schritt1;
 
 public class Mitarbeiter extends Person {
-    public Mitarbeiter(String vorname, String nachname) {
+    public Mitarbeiter(String vorname, String nachname, Adresse adresseMitarbeiter) {
+
         super(vorname, nachname);
     }
 
