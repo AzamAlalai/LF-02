@@ -43,6 +43,7 @@ public class Kaufvertrag {
 
     @Override
     public String toString() {
-        return  "Der Käufer ist [" + getKäufer().getVorname() + "] [" + getKäufer().getNachname() + "]\nDer Verkäufer ist [" + getVerkäufer().getVorname() + "] [" + getVerkäufer().getNachname() + "]\nDie Ware ist [" + getWare().getBezeichnung() + "]\nDer Preis ist [" + getWare().getPreis() + "]\nDie Zahlungsmodalitäten sind [" + getZahlungsModalitaeten() + "]";
+        return "Kaufvertrag\n" +"verkäufer\n" + verkäufer + "\n-------------------------------------------" + "\n käufer\n" +
+                käufer + "\n -------------------------------------" + " \nWare\n" + Ware +"\nZahlungsmodalitaeten " + zahlungsModalitaeten + "\n-----------------Ende-----------------";
     }
 }
