@@ -1,5 +1,8 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 public class Programm {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Ware ware = new Ware("Laptop", 250.0);
         ware.setBeschreibung("Super krasses Gaming-Laptop");
         ware.getBesonderheiten().add("Tasche");
@@ -19,6 +22,11 @@ public class Programm {
         vertrag.setZahlungsModalitaeten("Privater Barverkauf");
 
         System.out.println(vertrag);
+        String datei = "H:/LF-02/vertrag.txt";
+        PrintWriter printWriter = new PrintWriter(datei);
+        printWriter.print(vertrag);
+
+        printWriter.close();
     }
 
 }
