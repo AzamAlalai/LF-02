@@ -43,7 +43,7 @@ public class Kaufvertrag {
 
     @Override
     public String toString() {
-        return "Kaufvertrag\n" +"verkäufer\n" + verkäufer + "\n-------------------------------------------" + "\n käufer\n" +
+        return "Kaufvertrag\n" +"verkäufer\n" + verkäufer + "\n-------------------------------------------" + "\n käufer\n"+
                 käufer + "\n -------------------------------------" + " \nWare\n" + Ware +"\nZahlungsmodalitaeten " + zahlungsModalitaeten + "\n-----------------Ende-----------------";
     }
 }

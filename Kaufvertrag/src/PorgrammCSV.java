@@ -3,35 +3,65 @@ import java.io.PrintWriter;
 
 public class PorgrammCSV {
     public static void main(String[] args) throws FileNotFoundException {
-        Kaufvertrag kaufvertrag1= erstelleaufvertrag();
-        wrirtCSV(kaufvertrag1);
-    }
-    private static Kaufvertrag erstelleaufvertrag(){
-        //verkäufer
-        Vertragspartner verkaeufer = new Vertragspartner("Azam","Alali");
-        verkaeufer.setAusweisNr("12345678910");
-        Adresse adresse1 = new Adresse("Juckt kein","629","225806","Kabul");
-        //käufer
-        Vertragspartner kaeufer = new Vertragspartner("Nasier","Amiere");
-        verkaeufer.setAusweisNr("12345678911");
-        Adresse adresse2 = new Adresse("Kein ahnung","6296","225806","Raqa");
-        //waren
-        Ware ware = new Ware("Kokaien",250000);
-        ware.getBesonderheiten().add("Die waren kommen aus colombia");
-        Kaufvertrag kaufvertrag1 = new Kaufvertrag(verkaeufer,kaeufer,ware);
-        kaufvertrag1.setZahlungsModalitaeten("Paypal");
-
-
-        return kaufvertrag1;
+        csv(KaufvertragErstellen());
 
     }
-    public static void wrirtCSV(Kaufvertrag kaufvertrag) throws FileNotFoundException {
-        String datei = "H:/LF-02 Test/Kaufvertrag.csv";
-        PrintWriter PrintWriter = new PrintWriter (datei);
-        PrintWriter.print(kaufvertrag);
-        PrintWriter.close();
+    public static Kaufvertrag KaufvertragErstellen() {
+        //Käufer
+        Vertragspartner Käufer = new Vertragspartner("Azam", "Alali");
+        Adresse Käuferadresse = new Adresse("Ehlersdamm", "88", "28307", "Bremen");
+        Käufer.setAdresse(Käuferadresse);
+        Käufer.setAusweisNr("12345678910");
+
+        //Verkäufer
+        Vertragspartner Verkäufer = new Vertragspartner("Mohmmad", "Abazid");
+        Adresse Verkäuferadresse = new Adresse("Zwischen Dorpen", "41", "28259", "Bremen");
+        Verkäufer.setAdresse(Verkäuferadresse);
+        Verkäufer.setAusweisNr("12345678910");
+
+        //Ware
+        Ware ware = new Ware("Kette",25);
+        ware.addBesonderheiten("Dierekt aus Holland");
+        ware.addMaengel("Starke Nebenwirkungen");
+
+        //Vertrag
+        Kaufvertrag kaufvertrag = new Kaufvertrag(Verkäufer, Käufer, ware);
+
+        return kaufvertrag;
     }
 
 
+
+
+    public static void csv(Kaufvertrag kaufvertrag) throws FileNotFoundException {
+        PrintWriter pw = new PrintWriter("Test629.csv");
+        pw.print("Vertragsparntner;");
+
+        pw.print("Name;");
+        pw.print("Straße;");
+        pw.print("PLZ;");
+        pw.print("Ort;");
+        pw.println("AusweissNr");
+
+
+        // Verkäufer
+        pw.print("Verkäufer;");
+        pw.print(kaufvertrag.getVerkäufer().getNachname() + "," + kaufvertrag.getVerkäufer().getVorname() + ";");
+        pw.print(kaufvertrag.getVerkäufer().getAdresse().getStrasse() + " " + kaufvertrag.getVerkäufer().getAdresse().getHausNr() + ";");
+        pw.print(kaufvertrag.getVerkäufer().getAdresse().getPlz() + ";");
+        pw.print(kaufvertrag.getVerkäufer().getAdresse().getOrt() + ";");
+        pw.println(kaufvertrag.getVerkäufer().getAusweisNr());
+        //Käufer
+        pw.print("Käufer;");
+        pw.print(kaufvertrag.getKäufer().getNachname() + "," + kaufvertrag.getKäufer().getVorname() + ";");
+        pw.print(kaufvertrag.getKäufer().getAdresse().getStrasse() + " " + kaufvertrag.getKäufer().getAdresse().getHausNr() + ";");
+        pw.print(kaufvertrag.getKäufer().getAdresse().getPlz() + ";");
+        pw.print(kaufvertrag.getKäufer().getAdresse().getOrt() + ";");
+
+        pw.println(kaufvertrag.getKäufer().getAusweisNr());
+
+        pw.close();
+    }
 
 }
+
