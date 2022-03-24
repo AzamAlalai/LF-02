@@ -5,7 +5,7 @@ import java.io.IOException;
 public class ProgrammReadCsv {
 
         public static void main(String[] args) throws IOException {
-            String datei = "Test629.csv";
+            String datei = "Test123.csv";
             BufferedReader br = new BufferedReader(new FileReader(datei));
             String zeile;
             while ((zeile = br.readLine()) != null) {
