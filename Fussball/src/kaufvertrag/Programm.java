@@ -1,3 +1,10 @@
+package kaufvertrag;
+
+import businessObjects.Adresse;
+import businessObjects.Kaufvertrag;
+import businessObjects.Vertragspartner;
+import businessObjects.Ware;
+
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 

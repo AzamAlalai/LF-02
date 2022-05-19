@@ -1,3 +1,10 @@
+package kaufvertrag;
+
+import businessObjects.Adresse;
+import businessObjects.Kaufvertrag;
+import businessObjects.Vertragspartner;
+import businessObjects.Ware;
+
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
@@ -20,7 +27,7 @@ class ProgrammCSV {
         Verkäufer.setAdresse(Verkäuferadresse);
         Verkäufer.setAusweisNr("987169854265");
 
-        //Ware
+        //businessObjects.Ware
         Ware Ott = new Ware("0,7", 10);
         Ott.addBesonderheiten("Dierekt aus Holland");
         Ott.addMaengel("Starke Nebenwirkungen");

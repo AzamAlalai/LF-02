@@ -1,3 +1,8 @@
+package kaufvertrag;
+
+import businessObjects.Adresse;
+import businessObjects.Vertragspartner;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

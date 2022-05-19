@@ -1,3 +1,8 @@
+package kaufvertrag;
+
+import businessObjects.Adresse;
+import businessObjects.Vertragspartner;
+import businessObjects.Ware;
 import com.itextpdf.io.font.constants.StandardFonts;
 
 import com.itextpdf.kernel.font.PdfFont;
@@ -36,7 +41,7 @@ public class KaufvertragPDF {
 
 
 
-            String datei = "H:/LF-02 Test/KaufvertragPDF.pdf";
+            String datei = "H:/LF-02 Test/kaufvertrag.KaufvertragPDF.pdf";
 
             PdfWriter writer = new PdfWriter(datei);
 
@@ -95,7 +100,7 @@ public class KaufvertragPDF {
 
             verkaeufer.setAusweisNr("654321");
 
-            //Ware
+            //businessObjects.Ware
 
             Ware kette = new Ware("Königskette", 10000.500);
 
@@ -106,7 +111,7 @@ public class KaufvertragPDF {
             kette.getMaengel().add("Das zu lange tragen dieser Kette kann dazu führen, dass jede Frau auf der Welt auf sie steht außer die Frauen der Familie Johnson");
 
 
-            Paragraph ueberschrift = new Paragraph("Kaufvertrag");
+            Paragraph ueberschrift = new Paragraph("businessObjects.Kaufvertrag");
 
             ueberschrift.addStyle(fontueberschrift);
 
@@ -139,7 +144,7 @@ public class KaufvertragPDF {
             waretable.addCell("Hallo2");
 
 
-            Paragraph ware = new Paragraph(new Text("Ware Information").addStyle(fontAbsatzUeberschrift));
+            Paragraph ware = new Paragraph(new Text("businessObjects.Ware Information").addStyle(fontAbsatzUeberschrift));
 
             ware.add("\n");
 

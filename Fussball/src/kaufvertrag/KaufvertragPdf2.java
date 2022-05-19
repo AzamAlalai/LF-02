@@ -1,3 +1,5 @@
+package kaufvertrag;
+
 import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.colors.DeviceRgb;
@@ -15,7 +17,7 @@ import java.io.IOException;
 public class KaufvertragPdf2   {
     public static void main(String[] args) throws  IOException {
 
-        String datei = "H:/Dokumente/Kaufvertrag.pdf";
+        String datei = "H:/Dokumente/businessObjects.Kaufvertrag.pdf";
 
 
         // PdfWriter
@@ -30,7 +32,7 @@ public class KaufvertragPdf2   {
 
 
         //Paragraph 1
-        Paragraph p1 = new Paragraph("Kaufvertrag vom XX.XX.XXXX").setFontColor(new DeviceRgb(50,100,150)).setFontSize(20).setBold();
+        Paragraph p1 = new Paragraph("businessObjects.Kaufvertrag vom 22.03.2022").setFontColor(new DeviceRgb(50,100,150)).setFontSize(20).setBold();
         p1.add("\n");
         p1.add("\n");
         //Paragraph 2
@@ -42,7 +44,7 @@ public class KaufvertragPdf2   {
         p3.add("\n");
         p3.add("Personummer: 01747845808");
         p3.add("\n");
-        p3.add("Adresse: Vohnen str 45  28195 Bremen");
+        p3.add("businessObjects.Adresse: Vohnen str 45  28195 Bremen");
         p3.add("\n");
         p3.add("Telefonnummer: 01767452862");
 
@@ -60,10 +62,10 @@ public class KaufvertragPdf2   {
         p5.add("\n");
         p5.add("Telefonnummer: 01568623530");
         //Paragraph 6
-        Paragraph p6 = new Paragraph("Verkaufte Ware").setFontColor(new DeviceRgb(75,40,90)).setFontSize(16).setBold();
+        Paragraph p6 = new Paragraph("Verkaufte businessObjects.Ware").setFontColor(new DeviceRgb(75,40,90)).setFontSize(16).setBold();
         p6.add("\n");
         //Paragraph 7
-        Paragraph p7 = new Paragraph("Ware: PKW ").setFontColor(new DeviceRgb());
+        Paragraph p7 = new Paragraph("businessObjects.Ware: PKW ").setFontColor(new DeviceRgb());
         p7.add("\n");
         p7.add("Beschreibung: Mercedes S63 AMG v8 ");
         p7.add("\n");
@@ -144,9 +146,9 @@ public class KaufvertragPdf2   {
 
         Paragraph p15 = new Paragraph("Dauer der Lieferung in  Tagen: 5 Tage");
         p15.add("\n");
-        p15.add(" Zustellung am XX.XX.XXXX");
+        p15.add(" Zustellung am 24.03.2022");
         p15.add("\n");
-        p15.add("Zustellende Adresse: Vohnen str. 49");
+        p15.add("Zustellende businessObjects.Adresse: Vohnen str. 49");
         p15.add("\n");
         p15.add("Abholstelle: -");
         p15.add("\n");

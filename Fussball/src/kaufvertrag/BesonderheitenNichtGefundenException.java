@@ -1,3 +1,5 @@
+package kaufvertrag;
+
 public class BesonderheitenNichtGefundenException {
     private final String besonderheiten;
 
