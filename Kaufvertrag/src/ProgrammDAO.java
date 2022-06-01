@@ -1,20 +1,36 @@
 import businessObjects.Vertragspartner;
 import businessObjects.Ware;
-import dao.DaoException;
 import dao.VertragspartnerDAO;
 import dao.WareDAO;
 
-import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class ProgrammDAO {
-    public static void main(String[] args) throws ClassNotFoundException, SQLException, DaoException {
+    public static void main(String[] args) throws ClassNotFoundException {
         VertragspartnerDAO vertragspartnerDAO = new VertragspartnerDAO();
-        Vertragspartner vertragspartner= vertragspartnerDAO.read("12345678");
-        System.out.println(vertragspartner.getVorname());
-
         WareDAO wareDAO = new WareDAO();
-        Ware ware = wareDAO.read("1");
+
+        Vertragspartner vertragspartner = new VertragspartnerDAO().read("1673");
+        vertragspartnerDAO.update("1673", "Corona strasse", "1");
+        vertragspartnerDAO.insertInto("8181","Erling","Haarland", "Juluiskante", "546","28277", "Bremen");
+        System.out.println(vertragspartner);
+        System.out.println("---------------------------------------------------");
+        ArrayList<Vertragspartner> vertragspartnerListe = vertragspartnerDAO.read();
+        for (Vertragspartner v: vertragspartnerListe) {
+            System.out.println(v);
+        }
+
+        System.out.println("-------------------------------------------------------");
+        Ware ware = new WareDAO().read("2");
         System.out.println(ware);
+
+        ArrayList<Ware> wareListe = new WareDAO().read();
+        System.out.println("------------------------------------------------------------------------------");
+        System.out.println(wareListe);
+
+        System.out.println("super!!!!");
+
+
 
 
     }
